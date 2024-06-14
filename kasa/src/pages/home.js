@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import "../../assets/home.scss";
+import "../assets/home.scss";
 
 const Home = () => {
   const [data, setData] = useState([]);

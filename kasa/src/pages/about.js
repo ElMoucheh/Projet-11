@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import "../../assets/about.scss";
-import { ReactComponent as Logo } from '../../assets/img/white/arrow-up.svg';
+import "../assets/about.scss";
+import { ReactComponent as Logo } from '../assets/img/white/arrow-up.svg';
 
 const About = () => {
   const [activeIndices, setActiveIndices] = useState([]);

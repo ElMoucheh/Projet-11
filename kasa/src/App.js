@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router} from 'react-router-dom';
 
-import Navbar from './components/layout/navbar';
-import Footer from './components/layout/footer';
-import AppRoutes from './components/routes';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
+import AppRoutes from './routes';
 
 import "./assets/constants/global.scss";
 

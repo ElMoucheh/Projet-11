@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation  } from 'react-router-dom';
-import '../../assets/navbar.scss';
-import { ReactComponent as Logo } from '../../assets/img/color/kasa.svg';
+import '../assets/navbar.scss';
+import { ReactComponent as Logo } from '../assets/img/color/kasa.svg';
 
 const Navbar = () => {
     const location = useLocation();
