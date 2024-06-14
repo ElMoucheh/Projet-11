@@ -11,7 +11,7 @@ const AppRoutes = () => {
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route path="/a-propos" element={<About />} />
-      <Route path="/fiche-logement" element={<Accomodation />} />
+      <Route path="/fiche-logement/:id" element={<Accomodation />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -41,27 +41,96 @@
             align-items: center;
         }
 
-        .list{
+        .container_list{
             &{
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                background-color: $main-color;
-                padding: 15px;
-                border-radius: 5px;
-                font-size: 24px;
-                margin-bottom: 30px;
+                flex-direction: column;
                 width: 80%;
+                margin-bottom: 30px;
             }
 
-            p{
-                font-family: "Montserrat", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: 600;
-                color: white;
-                font-style: normal;
+            .list_header{
+                &{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: $main-color;
+                    padding: 15px;
+                    border-radius: 5px;
+                    font-size: 24px;
+                    width: 100%;
+                }
+    
+                p{
+                    font-family: "Montserrat", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 600;
+                    color: white;
+                    font-style: normal;
+                }
+
+                svg {
+                    transform: rotate(0);
+                    transition: transform 0.3s;
+                }
+        
+                &.active svg {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .container_description {  
+                &{
+                    padding: 10px;
+                    background-color: #f8f8f8;
+                    border-radius: 5px;
+                    color: #555;
+                }  
+                
+
+                &.open {
+                    max-height: 500px;
+                  }
+            }
+
+        
+            .description {
+            margin: 0;
             }
         }
+
+        
+    }
+
+    @media (max-width: 768px) {
+
+        .banner{
+            &{
+                height: 110px;
+            }
+            
+
+            h2{
+                font-size: 24px;
+            }
+        }
+
+        .container{
+
+            .container_list{
+                &{
+                    width: 100%;
+                }
+                
+                .list_header{
+                    font-size: 17px;
+                    padding: 10px;
+                }
+                
+            }
+
+        }
+
     }
 }

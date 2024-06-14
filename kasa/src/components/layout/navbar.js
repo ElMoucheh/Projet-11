@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <Link to="/" activeclassname="active">
+            <Link to="/" className='lnk_img'>
                 <Logo className="logo" />
             </Link>
             <ul>
