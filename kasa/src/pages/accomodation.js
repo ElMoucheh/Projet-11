@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ReactComponent as Logo } from '../assets/img/white/arrow-up.svg';
+import Carousel from '../components/caroussel';
 
 import "../assets/accomodation.scss";
 import starFull from '../assets/img/color/star_full.svg';
@@ -62,7 +63,7 @@ const Accomodation = () => {
   return (
     <div className='accomodation'>
       <div className='banner'>
-        {/* Placeholder for banner image */}
+        <Carousel logement={logement} />
       </div>
       <div className='container'>
         <div className='container_head'>
@@ -94,8 +95,7 @@ const Accomodation = () => {
         <div className='container_list'>
           <div 
             className={`list_header ${descriptionOpen ? 'active' : ''}`}
-            onClick={() => setDescriptionOpen(!descriptionOpen)}
-          >
+            onClick={() => setDescriptionOpen(!descriptionOpen)}>
             <p>Description</p>
             <Logo />
           </div>
