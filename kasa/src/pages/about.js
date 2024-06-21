@@ -44,11 +44,9 @@ const About = () => {
               <p>{item.title}</p>
               <Logo />
             </div>
-            {activeIndices.includes(index) && (
-              <div className='container_description'>
-                <p className='description'>{item.description}</p>
-              </div>
-            )}
+            <div className={`container_description ${activeIndices.includes(index) ? 'open' : ''}`}>
+              <p className='description'>{item.description}</p>
+            </div>
           </div>
         ))}
       </div>

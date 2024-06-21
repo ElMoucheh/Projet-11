@@ -99,26 +99,22 @@ const Accomodation = () => {
             <p>Description</p>
             <Logo />
           </div>
-          {descriptionOpen && (
-            <div className='container_description open'>
-              <p>{logement.description}</p>
-            </div>
-          )}
+          <div className={`container_description ${descriptionOpen ? 'open' : ''}`}>
+            <p>{logement.description}</p>
+          </div>
         </div>
         <div className='container_list'>
           <div className={`list_header ${equipmentsOpen ? 'active' : ''}`} onClick={() => setEquipmentsOpen(!equipmentsOpen)}>
             <p>Équipements</p>
             <Logo />
           </div>
-          {equipmentsOpen && (
-            <div className='container_description open'>
-              <ul>
-                {logement.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <div className={`container_description ${equipmentsOpen ? 'open' : ''}`}>
+            <ul>
+              {logement.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

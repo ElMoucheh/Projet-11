@@ -185,18 +185,34 @@
       }
 
       .container_description {
-        padding: 10px;
-        background-color: #f8f8f8;
-        border-radius: 5px;
-        color: #555;
-
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        
         &.open {
           max-height: 500px;
         }
-      }
 
-      .description {
-        margin: 0;
+        p {
+          padding: 10px;
+          background-color: #f8f8f8;
+          border-radius: 5px;
+          color: #555;
+          margin: 0;
+        }
+
+        ul {
+          padding: 10px;
+          background-color: #f8f8f8;
+          border-radius: 5px;
+          color: #555;
+          margin: 0;
+          list-style: none;
+        }
+
+        li {
+          margin-bottom: 10px;
+        }
       }
     }
   }
