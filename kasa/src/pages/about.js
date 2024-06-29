@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import "../assets/about.scss";
-import { ReactComponent as Logo } from '../assets/img/white/arrow-up.svg';
+import React from 'react';
+import Banner from '../components/banner';
+import Collapse from '../components/collapse';
+import "../assets/pages/about.scss";
 
 const About = () => {
-  const [activeIndices, setActiveIndices] = useState([]);
-
   const data = {
     items: [
       {
@@ -26,28 +25,19 @@ const About = () => {
     ]
   };
 
-  const handleClick = (index) => {
-    setActiveIndices((prevIndices) => 
-      prevIndices.includes(index) 
-        ? prevIndices.filter((i) => i !== index) 
-        : [...prevIndices, index]
-    );
-  };
-
   return (
     <div className='about'>
-      <div className='banner'></div>
+      <Banner 
+        backgroundImage="banner_about.jpg" 
+      />
       <div className='container'>
         {data.items.map((item, index) => (
-          <div key={index} className='container_list' onClick={() => handleClick(index)}>
-            <div className={`list_header ${activeIndices.includes(index) ? 'active' : ''}`}>
-              <p>{item.title}</p>
-              <Logo />
-            </div>
-            <div className={`container_description ${activeIndices.includes(index) ? 'open' : ''}`}>
-              <p className='description'>{item.description}</p>
-            </div>
-          </div>
+          <Collapse 
+            key={index}
+            title={item.title}
+            content={item.description}
+            isList={false}
+          />
         ))}
       </div>
     </div>

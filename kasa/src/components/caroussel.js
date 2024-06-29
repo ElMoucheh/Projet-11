@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ReactComponent as ArrowIcon } from '../assets/img/white/arrow-up.svg';
-import '../assets/carousel.scss';
+import '../assets/components/carousel.scss';
 
 const Carousel = ({ logement }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

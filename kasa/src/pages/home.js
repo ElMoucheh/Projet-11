@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import "../assets/home.scss";
+import Banner from '../components/banner';
+import CardLink from '../components/card_accomodation';
+import "../assets/pages/home.scss";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -14,19 +15,13 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <div className='banner'>
-        <h2>Chez vous, partout et ailleurs</h2>
-      </div>
+     <Banner 
+        title="Chez vous, partout et ailleurs" 
+        backgroundImage="banner_home.jpg" 
+      />
       <div className='container'>
         {data.map((item) => (
-          <Link to={`/fiche-logement/${item.id}`} className='card-link' key={item.id}>
-            <div className='card'>
-              <div className='card-image'>
-                <img src={item.cover} alt={item.title} />
-              </div>
-              <p>{item.title}</p>
-            </div>
-          </Link>
+          <CardLink item={item} key={item.id} />
         ))}
       </div>
     </div>
