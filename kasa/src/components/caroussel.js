@@ -21,10 +21,6 @@ const Carousel = ({ logement }) => {
         }
     };
 
-    const handlePaginationClick = (index) => {
-        setCurrentImageIndex(index);
-    };
-
     return (
         <div className="carousel-container">
             {logement.pictures.length > 1 && (
@@ -44,13 +40,7 @@ const Carousel = ({ logement }) => {
             )}
             {logement.pictures.length > 1 && (
                 <div className="carousel-pagination">
-                    {logement.pictures.map((_, index) => (
-                        <span
-                            key={index}
-                            className={`pagination-dot ${index === currentImageIndex ? 'active' : ''}`}
-                            onClick={() => handlePaginationClick(index)}
-                        ></span>
-                    ))}
+                    <p>{currentImageIndex + 1}/{logement.pictures.length}</p>
                 </div>
             )}
         </div>
