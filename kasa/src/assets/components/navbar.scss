@@ -13,6 +13,7 @@ nav{
 
         .logo{
             box-sizing: border-box;
+            width: 100%;
         }
     }
 
@@ -35,7 +36,20 @@ nav{
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1440px) {
+
+        .logo {
+            height: 45px;
+        }
+    
+        ul {
+            li {
+                font-size: 17px; 
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
 
         .logo {
             height: 36px;

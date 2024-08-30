@@ -259,3 +259,34 @@
     content: '';
   }
 }
+
+
+
+
+@media (max-width: 375px) {
+  .accomodation {
+    .wrapper_caroussel {
+      height: 255px;
+    }
+  }
+  .accomodation {
+    .container {
+      .container_host {
+        .profil {
+          p {
+            flex: 1;
+          }
+  
+          .bubble {
+            flex: 1;
+          }
+        }    
+        .container_rate {
+          img {
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

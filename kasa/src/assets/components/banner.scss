@@ -36,5 +36,15 @@
       font-size: 48px;
     }
   }
+
+@media (max-width: 375px) {
+  .banner{
+    height: 100px;
+    h2{
+      font-size: 24px;
+    }
+  }
+    
+}
   
   

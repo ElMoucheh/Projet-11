@@ -6,7 +6,10 @@ const Footer = () => {
     return (
         <div className='footer'>
             <Logo className="logo"/>
-            <p>© 2020 Kasa. All rights reserved</p>
+            <div className='txt_footer'>
+                <p>© 2020 Kasa.</p>
+                <p>All rights reserved</p>
+            </div>
         </div>
     );
 };

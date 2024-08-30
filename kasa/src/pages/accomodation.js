@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../components/caroussel';
 import RatingStars from '../components/rating_stars';
-import ContainerList from '../components/collapse';
+import Collapse from '../components/collapse';
 import Tags from '../components/tags';
 import "../assets/pages/accomodation.scss";
 
@@ -66,12 +66,12 @@ const Accomodation = () => {
         </div>
       </div>
       <div className='container_details'>
-        <ContainerList 
+        <Collapse
           title="Description" 
           content={logement.description} 
           isList={false}
         />
-        <ContainerList 
+        <Collapse
           title="Équipements" 
           content={logement.equipments} 
           isList={true}
